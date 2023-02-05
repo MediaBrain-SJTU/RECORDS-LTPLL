@@ -86,7 +86,8 @@ Note: `--mixup` means to use Mixup.
 
 
 ### Results
-[**Table 1.** Results on CIFAR-10-LT]
+#### CIFAR-10-LT
+
 | Imbalance ratio $\rho$ |  50   |  50   |  50   |  100  |  100  |  100  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
@@ -96,7 +97,7 @@ Note: `--mixup` means to use Mixup.
 | SoLar (w/ Mixup)                   | 83.88    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
 | CORR + RECORDS (w/ Mixup)             |84.25 |82.5 |71.24|79.79|74.07|62.25|
 
-[**Table 1.** Results on CIFAR-100-LT]
+#### CIFAR-100-LT
 
 | Imbalance ratio $\rho$ |     50     |     50     |     50     |     100    |     100    |     100    |
 |:-----:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
