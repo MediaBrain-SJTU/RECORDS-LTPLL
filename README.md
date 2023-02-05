@@ -92,7 +92,7 @@ Note: `--mixup` means to use Mixup.
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
 | CORR                   | 76.12 | 56.45 | 41.56 | 66.38 | 50.09 | 38.11 |
-| CORR + Oracle-LA            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
+| CORR + Oracle-LA[[2]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
 | CORR + RECORDS              | 82.57 | 80.28 | 67.24 | 77.66 | 72.90 | 57.46 |
 | SoLar (w/ Mixup)                   | 83.88    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
 | CORR + RECORDS (w/ Mixup)             |84.25 |82.5 |71.24|79.79|74.07|62.25|
@@ -108,7 +108,7 @@ Note: `--mixup` means to use Mixup.
 | SoLar (w/ Mixup) |47.93   |46.85    |45.1|42.51          |41.71|39.15          |
 | CORR + RECORDS (w/ Mixup)|52.08|50.58|47.91|46.57|45.22|44.73|
 
-Note: SoLar[[2]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
+Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
 ## Acknowledgement
 
@@ -117,4 +117,6 @@ We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](http
 ## Reference
 <span id="CORR">[1]</span> DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
 
-<span id="SoLar">[2]</span> H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
+<span id="LA">[2]</span> AK Menon, S Jayasumana, AS Rawat, et al. Long-tail learning via logit adjustment. ICLR. 2021.
+
+<span id="SoLar">[3]</span> H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
