@@ -60,7 +60,7 @@ After the preparation work, the whole project should have the following structur
 
 ### Running
 
-#### Run CORR[1] on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+#### Run CORR[^1] on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
 ```shell
 CUDA_VISIBLE_DEVICES=0 python -u train.py --exp-dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist-url 'tcp://localhost:10000' --multiprocessing-distributed --world-size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print-freq 100 --partial_rate 0.3 --imb_factor 0.01
 ```
@@ -107,13 +107,13 @@ Note: `--mixup` means to use Mixup.
 | SoLar (w/ Mixup) |47.93   |46.85    |45.1|42.51          |41.71|39.15          |
 | CORR + RECORDS (w/ Mixup)|52.08|50.58|47.91|46.57|45.22|44.73|
 
-Note: SoLar[2] is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
+Note: SoLar[^2] is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
 ## Acknowledgement
 
 We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), [PRODEN](https://github.com/Lvcrezia77/PRODEN), and [SADE](https://github.com/Vanint/SADE-AgnosticLT).
 
 ## Reference
-[1] DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
+[^1]: DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
 
-[2] H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
+[^2]: H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
