@@ -1,0 +1,12 @@
+data/
+experiment/
+
+# macOS dir files
+.DS_Store
+
+*.sh
+
+*__pycache__*
+
+*__.py
+
