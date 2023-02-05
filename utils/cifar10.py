@@ -7,45 +7,6 @@ from .randaugment import RandomAugment
 from .utils_algo import generate_uniform_cv_candidate_labels
 from .imbalance_cifar import IMBALANCECIFAR10
 
-#     test_transform = transforms.Compose(
-#             [transforms.ToTensor(),
-#             transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261))])
-    
-#     temp_train = dsets.CIFAR10(root='./data', train=True, download=True, transform=transforms.ToTensor())
-#     data, labels = temp_train.data, torch.Tensor(temp_train.targets).long()
-#     # get original data and labels
-#     hierarchical = False
-
-#     test_dataset = dsets.CIFAR10(root='./data', train=False, transform=test_transform)
-#     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size*4, shuffle=False, num_workers=4,
-#         sampler=torch.utils.data.distributed.DistributedSampler(test_dataset, shuffle=False))
-#     # set test dataloader
-#     if test:
-#         return test_loader
-    
-#     partialY = generate_uniform_cv_candidate_labels(labels, partial_rate)
-#     # generate partial labels
-#     temp = torch.zeros(partialY.shape)
-#     temp[torch.arange(partialY.shape[0]), labels] = 1
-#     if torch.sum(partialY * temp) == partialY.shape[0]:
-#         print('partialY correctly loaded')
-#     else:
-#         print('inconsistent permutation')
-
-#     print('Average candidate num: ', partialY.sum(1).mean())
-#     partial_matrix_dataset = CIFAR10_Augmentention(data, partialY.float(), labels.float(),con=con)
-#     # generate partial label dataset
-
-#     train_sampler = torch.utils.data.distributed.DistributedSampler(partial_matrix_dataset)
-#     partial_matrix_train_loader = torch.utils.data.DataLoader(dataset=partial_matrix_dataset, 
-#         batch_size=batch_size, 
-#         shuffle=(train_sampler is None), 
-#         num_workers=4,
-#         pin_memory=True,
-#         sampler=train_sampler,
-#         drop_last=True)
-#     return partial_matrix_train_loader,partialY,train_sampler,test_loader
-
 def load_cifar10_imbalance(partial_rate, batch_size, hierarchical=False, imb_type='exp', imb_factor=0.01,con=True,test=False,shuffle=False):
     """Load PLL version of CIFAR-10-LT dataset
 
