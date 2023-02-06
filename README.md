@@ -110,11 +110,11 @@ Note: `--mixup` means to use Mixup.
 
 Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
-## Acknowledgement
+## Acknowledgements
 
 We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), [PRODEN](https://github.com/Lvcrezia77/PRODEN), and [SADE](https://github.com/Vanint/SADE-AgnosticLT).
 
-## Reference
+## References
 <span id="CORR">[1]</span> DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
 
 <span id="LA">[2]</span> AK Menon, S Jayasumana, AS Rawat, et al. Long-tail learning via logit adjustment. ICLR. 2021.
