@@ -23,6 +23,7 @@ from utils.utils_algo import *
 from utils.utils_loss import CORR_loss ,CORR_loss_RECORDS, CORR_loss_RECORDS_mixup
 from utils.cifar100 import load_cifar100_imbalance
 from utils.cifar10 import load_cifar10_imbalance
+from utils.voc import load_voc
 torch.set_printoptions(precision=2, sci_mode=False)
 
 parser = argparse.ArgumentParser(
@@ -231,6 +232,8 @@ def main_worker(gpu, ngpus_per_node, args):
     elif args.dataset == 'cifar10_im':
         train_loader, train_givenY, train_sampler, test_loader, cls_num_list_true_label = load_cifar10_imbalance(
             partial_rate=args.partial_rate, batch_size=args.batch_size, hierarchical=args.hierarchical, imb_factor=args.imb_factor, con=True,shuffle=class_shuffle)
+    elif args.dataset == 'voc':
+        train_loader, train_givenY, train_sampler, test_loader, cls_num_list_true_label = load_voc(batch_size=args.batch_size,con=True)
     else:
         raise NotImplementedError(
             "You have chosen an unsupported dataset. Please check and try again.")
