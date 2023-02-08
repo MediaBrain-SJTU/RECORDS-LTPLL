@@ -59,7 +59,7 @@ After the preparation work, the whole project should have the following structur
 │   ├── data.py
 │   ├── resnet.py
 │   ├── general.py
-└── train.py            # train for CORR (+ RECORDS)
+├── train.py            # train for CORR (+ RECORDS)
 └── train_solar.py      # train for SoLar
 ```
 
