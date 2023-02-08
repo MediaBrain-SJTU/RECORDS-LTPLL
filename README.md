@@ -16,7 +16,7 @@ If you find our work inspiring or use our codebase in your research, please cons
 ```
 @inproceedings{hong2023long,
   title={Long-Tailed Partial Label Learning via Dynamic Rebalancing},
-  author={Hong, Feng and Yao, Jiangchao and Zhou, Zhihan and Wang, Yanfeng and Zhang, Ya},
+  author={Hong, Feng and Yao, Jiangchao and Zhou, Zhihan and Zhang, Ya and Wang, Yanfeng},
   booktitle={{ICLR}},
   year={2023}
 }
@@ -93,9 +93,9 @@ Note: `--mixup` means to use Mixup.
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
 | CORR                   | 76.12 | 56.45 | 41.56 | 66.38 | 50.09 | 38.11 |
 | CORR + Oracle-LA[[2]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
-| CORR + RECORDS              | 82.57 | 80.28 | 67.24 | 77.66 | 72.90 | 57.46 |
-| SoLar (w/ Mixup)                   | 83.88    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
-| CORR + RECORDS (w/ Mixup)             |84.25 |82.5 |71.24|79.79|74.07|62.25|
+| CORR + RECORDS              | 82.57 | <u>80.28</u> | <u>67.24</u> | <u>77.66</u> | <u>72.90</u> | <u>57.46</u> |
+| SoLar (w/ Mixup)                   | <u>83.88</u>    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
+| CORR + RECORDS (w/ Mixup)             |__84.25__ |__82.5__ |__71.24__|__79.79__|__74.07__|__62.25__|
 
 #### CIFAR-100-LT
 
@@ -104,9 +104,9 @@ Note: `--mixup` means to use Mixup.
 | ambiguity $q$          | 0.03       | 0.05       | 0.07       | 0.03       | 0.05       | 0.07       |
 | CORR                   | 42.29      | 38.03      | 36.59      | 38.39      | 34.09      | 31.05      |
 | CORR + Oracle-LA            | 22.56      | 5.59       | 3.12       | 11.37      | 3.32       | 1.98       |
-| CORR + RECORDS|48.06|45.56|42.51|42.25|40.59|38.65|
-| SoLar (w/ Mixup) |47.93   |46.85    |45.1|42.51          |41.71|39.15          |
-| CORR + RECORDS (w/ Mixup)|52.08|50.58|47.91|46.57|45.22|44.73|
+| CORR + RECORDS|<u>48.06</u>|45.56|42.51|42.25|40.59|38.65|
+| SoLar (w/ Mixup) |47.93   |<u>46.85</u>    |<u>45.1</u>|<u>42.51</u>       |<u>41.71</u>|<u>39.15</u>      |
+| CORR + RECORDS (w/ Mixup)|__52.08__|__50.58__|__47.91__|__46.57__|__45.22__|__44.73__|
 
 Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
