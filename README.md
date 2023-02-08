@@ -63,6 +63,32 @@ After the preparation work, the whole project should have the following structur
 └── train_solar.py      # train for SoLar
 ```
 
+### Quick Preview
+For a self-training PLL loss:
+```python
+# loss function (batch forwards)
+loss = caculate_loss(logits, labels, self.confidence[index,:])
+if update_target:
+    self.confidence[index,:]=update_confidence(logits, self.confidence[index,:])
+```
+
+We can easily add RECORDS to the loss function:
+```python
+# loss function (batch forwards)
+loss = caculate_loss(logits, labels, self.confidence[index,:])
+# momentum updates
+if self.feat_mean is None:
+    self.feat_mean = 0.1*feat.detach().mean(0)
+else:
+    self.feat_mean = 0.9*self.feat_mean + 0.1*feat.detach().mean(0)
+if update_target:
+    # debias
+    bias = model.module.fc(self.feat_mean.unsqueeze(0)).detach()
+    bias = F.softmax(bias, dim=1)
+    logits_rebalanced = logits - torch.log(bias + 1e-9)
+    self.confidence[index,:]=update_confidence(logits_rebalanced, self.confidence[index,:])
+```
+
 ### Data Preparation
 #### CIFAR
 For the CIFAR dataset, no additional data preparation is required. The first run will automatically download CIFAR to "./data".
@@ -268,7 +294,7 @@ Note: `--mixup` means to use Mixup.
 ## Extensions
 ### To Implement Your Own Model
 - Add your model to "./models" and load the model in train.py.
-
+- Implement functions(./utils/utils_loss.py) specfic to your models in train.py.
 ### To Implement Other Datasets
 - Create the PLL version of the datasets and add to "./data".
 - Implement the dataset (e.g., ./utils/cifar10.py).
