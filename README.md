@@ -61,6 +61,7 @@ After the preparation work, the whole project should have the following structur
 ### Running
 
 #### Run CORR[[1]](#CORR) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+
 ```shell
 CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist_url 'tcp://localhost:10000' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.3 --imb_factor 0.01
 ```
@@ -72,23 +73,33 @@ CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --d
 Note: `--records` means to apply RECORDS on the PLL baseline.
 
 #### Run CORR + RECORDS on CIFAR-100-LT-NU with $q=0.03$ and Imbalance ratio $\rho = 0.01$
+
 ```shell
 CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-100 --dataset cifar100_im --num_class 100 --dist_url 'tcp://localhost:10002' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.03 --imb_factor 0.01 --records --hierarchical
 ```
+
 Note: `--hierarchical` means using the non-uniform version of the dataset, i.e., CIFAR-100-LT-NU.
 
-#### Run CORR + RECORDS with Mixup on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+#### Run SoLar[[3]](#SoLar) (w/ Mixup) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python -u train_solar.py --exp_dir experiment/SoLar-CIFAR-100 --dataset cifar10 --num_class 10 --partial_rate 0.3 --imb_type exp --imb_ratio 100 --est_epochs 100 --rho_range 0.2,0.6 --gamma 0.1,0.01 --epochs 800 --lr 0.01 --wd 1e-3 --cosine --seed 123
+```
+
+Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
+
+Notes: On CIFAR-100-LT change these parameters to: `--est_epochs 20 --rho_range 0.2,0.5 --gamma 0.05,0.01`.
+
+#### Run CORR + RECORDS (w/ Mixup) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+
 ```shell
 CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist_url 'tcp://localhost:10003' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.3 --imb_factor 0.01 --records --mixup
 ```
+
 Note: `--mixup` means to use Mixup.
-
-
 
 ### Results
 #### CIFAR-10-LT
-
-
 | Imbalance ratio $\rho$ |  50   |  50   |  50   |  100  |  100  |  100  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
@@ -240,11 +251,11 @@ Note: `--mixup` means to use Mixup.
     </tr>
 </table> -->
 
-Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
+<!-- Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner.  -->
 
 ## Acknowledgements
 
-We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), [PRODEN](https://github.com/Lvcrezia77/PRODEN), and [SADE](https://github.com/Vanint/SADE-AgnosticLT).
+We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), [PRODEN](https://github.com/Lvcrezia77/PRODEN), [SADE](https://github.com/Vanint/SADE-AgnosticLT), and [SoLar](https://github.com/hbzju/SoLar).
 
 ## References
 <span id="CORR">[1]</span> DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
