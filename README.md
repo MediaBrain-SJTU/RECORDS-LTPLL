@@ -68,7 +68,7 @@ After the preparation work, the whole project should have the following structur
 For the CIFAT dataset, no additional data preparation is required. The first run will automatically download CIFAR to "./data".
 
 #### PASCAL VOC 2007
-Download the PLL version of PASCAL VOC 2007 and extract it to ". /data/VOC2017/". [Download (Google Drive)](https://drive.google.com/file/d/1OxZWambUGPcPttBFg9oo--Vd3j3Xu9tS/view?usp=sharing)
+Download the PLL version of PASCAL VOC 2007 and extract it to ". /data/VOC2017/". [[Download (Google Drive)]](https://drive.google.com/file/d/1OxZWambUGPcPttBFg9oo--Vd3j3Xu9tS/view?usp=sharing)
 
 ### Running
 
