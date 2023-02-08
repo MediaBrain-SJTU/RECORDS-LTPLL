@@ -92,13 +92,13 @@ CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-100 --
 
 Note: `--hierarchical` means using the non-uniform version of the dataset, i.e., CIFAR-100-LT-NU.
 
-#### Run SoLar[[3]](#SoLar) (w/ Mixup) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
+#### Run SoLar[[2]](#SoLar) (w/ Mixup) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
 
 ```shell
 CUDA_VISIBLE_DEVICES=0 python -u train_solar.py --exp_dir experiment/SoLar-CIFAR-100 --dataset cifar10 --num_class 10 --partial_rate 0.3 --imb_type exp --imb_ratio 100 --est_epochs 100 --rho_range 0.2,0.6 --gamma 0.1,0.01 --epochs 800 --lr 0.01 --wd 1e-3 --cosine --seed 123
 ```
 
-Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
+Note: SoLar is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
 Notes: On CIFAR-100-LT change these parameters to: `--est_epochs 20 --rho_range 0.2,0.5 --gamma 0.05,0.01`.
 
@@ -116,7 +116,7 @@ Note: `--mixup` means to use Mixup.
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
 | CORR                   | 76.12 | 56.45 | 41.56 | 66.38 | 50.09 | 38.11 |
-| CORR + Oracle-LA[[2]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
+| CORR + Oracle-LA[[3]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
 | CORR + RECORDS              | 82.57 | <i>80.28</i> | <i>67.24</i> | <i>77.66</i> | <i>72.90</i> | <i>57.46</i> |
 | SoLar (w/ Mixup)                   | <i>83.88</i>    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
 | CORR + RECORDS (w/ Mixup)             |<b>84.25<b> |<b>82.5<b> |<b>71.24<b>|<b>79.79<b>|<b>74.07<b>|<b>62.25<b>|
@@ -272,6 +272,8 @@ We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](http
 ## References
 <span id="CORR">[1]</span> DD Wu, DB Wang, ML Zhang. Revisiting consistency regularization for deep partial label learning. ICML. 2022.
 
-<span id="LA">[2]</span> AK Menon, S Jayasumana, AS Rawat, et al. Long-tail learning via logit adjustment. ICLR. 2021.
+<span id="SoLar">[2]</span> H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
 
-<span id="SoLar">[3]</span> H Wang, M Xia, Y Li, et al. SoLar: Sinkhorn Label Refinery for Imbalanced Partial-Label Learning. NeurIPS. 2022.
+<span id="LA">[3]</span> AK Menon, S Jayasumana, AS Rawat, et al. Long-tail learning via logit adjustment. ICLR. 2021.
+
+
