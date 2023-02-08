@@ -55,7 +55,12 @@ After the preparation work, the whole project should have the following structur
 │   ├── randaugment.py
 │   ├── utils_algo.py
 │   ├── utils_loss.py
-└── train.py            # train
+├── utils_solar         # utils for SoLar
+│   ├── data.py
+│   ├── resnet.py
+│   ├── general.py
+└── train.py            # train for CORR (+ RECORDS)
+└── train_solar.py      # train for SoLar
 ```
 
 ### Running
