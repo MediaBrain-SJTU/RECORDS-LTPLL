@@ -86,15 +86,19 @@ Note: `--mixup` means to use Mixup.
 
 
 ### Results
+<style> 
+.php{text-decoration:underline} 
+ </style>
 #### CIFAR-10-LT
+
 
 | Imbalance ratio $\rho$ |  50   |  50   |  50   |  100  |  100  |  100  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
 | CORR                   | 76.12 | 56.45 | 41.56 | 66.38 | 50.09 | 38.11 |
 | CORR + Oracle-LA[[2]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
-| CORR + RECORDS              | 82.57 | <i>80.28</i> | <i>67.24</i> | <i>77.66</i> | <i>72.90</i> | <i>57.46</i> |
-| SoLar (w/ Mixup)                   | <i>83.88</i>    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
+| CORR + RECORDS              | 82.57 | <div class="php">80.28</div> | <div class="php">67.24</div> | <div class="php">77.66</div> | <div class="php">72.90</div> | <div class="php">57.46</div> |
+| SoLar (w/ Mixup)                   | <div class="php">83.88</div>    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
 | CORR + RECORDS (w/ Mixup)             |<b>84.25<b> |<b>82.5<b> |<b>71.24<b>|<b>79.79<b>|<b>74.07<b>|<b>62.25<b>|
 
 <!-- <table>
@@ -137,15 +141,15 @@ Note: `--mixup` means to use Mixup.
     <tr>
         <td>CORR + RECORDS</td>
         <td>82.57</td>
-        <td><i>80.28</i></td>
-        <td><i>67.24</i></td>
-        <td><i>77.66</i></td>
-        <td><i>72.90</i></td>
-        <td><i>57.46</i></td>
+        <td><div class="php">80.28</div></td>
+        <td><div class="php">67.24</div></td>
+        <td><div class="php">77.66</div></td>
+        <td><div class="php">72.90</div></td>
+        <td><div class="php">57.46</div></td>
     </tr>
     <tr>
         <td>SoLar (w/ Mixup)</td>
-        <td><i>83.88</i></td>
+        <td><div class="php">83.88</div></td>
         <td>76.55</td>
         <td>54.61</td>
         <td>75.38</td>
@@ -170,8 +174,8 @@ Note: `--mixup` means to use Mixup.
 | ambiguity $q$          | 0.03       | 0.05       | 0.07       | 0.03       | 0.05       | 0.07       |
 | CORR                   | 42.29      | 38.03      | 36.59      | 38.39      | 34.09      | 31.05      |
 | CORR + Oracle-LA            | 22.56      | 5.59       | 3.12       | 11.37      | 3.32       | 1.98       |
-| CORR + RECORDS|<i>48.06</i>|45.56|42.51|42.25|40.59|38.65|
-| SoLar (w/ Mixup) |47.93   |<i>46.85</i>    |<i>45.1</i>|<i>42.51</i>       |<i>41.71</i>|<i>39.15</i>      |
+| CORR + RECORDS|<div class="php">48.06</div>|45.56|42.51|42.25|40.59|38.65|
+| SoLar (w/ Mixup) |47.93   |<div class="php">46.85</div>    |<div class="php">45.1</div>|<div class="php">42.51</div>       |<div class="php">41.71</div>|<div class="php">39.15</div>      |
 | CORR + RECORDS (w/ Mixup)|<b>52.08<b>|<b>50.58<b>|<b>47.91<b>|<b>46.57<b>|<b>45.22<b>|<b>44.73<b>|
 <!-- <table>
     <tr>
@@ -212,7 +216,7 @@ Note: `--mixup` means to use Mixup.
     </tr>
     <tr>
         <td>CORR + RECORDS</td>
-        <td><i>48.06</i></td>
+        <td><div class="php">48.06</div></td>
         <td>45.56</td>
         <td>42.51</td>
         <td>42.25</td>
@@ -222,11 +226,11 @@ Note: `--mixup` means to use Mixup.
     <tr>
         <td>SoLar (w/ Mixup)</td>
         <td>47.93</td>
-        <td><i>46.85</i></td>
-        <td><i>45.1</i></td>
-        <td><i>42.51</i></td>
-        <td><i>41.71</i></td>
-        <td><i>39.15</i></td>
+        <td><div class="php">46.85</div></td>
+        <td><div class="php">45.1</div></td>
+        <td><div class="php">42.51</div></td>
+        <td><div class="php">41.71</div></td>
+        <td><div class="php">39.15</div></td>
     </tr>
     <tr>
         <td>CORR + RECORDS (w/ Mixup)</td>
