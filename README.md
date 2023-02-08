@@ -87,7 +87,7 @@ Note: `--mixup` means to use Mixup.
 
 ### Results
 <style> 
-.php{border-bottom:1px solid #333} 
+.php{border-bottom:2px solid #000} 
  </style>
 #### CIFAR-10-LT
 
