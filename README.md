@@ -69,6 +69,7 @@ For a self-training PLL loss:
 # loss function (batch forwards)
 loss = caculate_loss(logits, labels, self.confidence[index,:])
 if update_target:
+    # disambiguation
     self.confidence[index,:]=update_confidence(logits, self.confidence[index,:])
 ```
 
@@ -82,7 +83,7 @@ if self.feat_mean is None:
 else:
     self.feat_mean = 0.9*self.feat_mean + 0.1*feat.detach().mean(0)
 if update_target:
-    # debias
+    # debias and disambiguation
     bias = model.module.fc(self.feat_mean.unsqueeze(0)).detach()
     bias = F.softmax(bias, dim=1)
     logits_rebalanced = logits - torch.log(bias + 1e-9)
