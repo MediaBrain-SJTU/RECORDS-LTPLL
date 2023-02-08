@@ -267,7 +267,7 @@ Note: `--mixup` means to use Mixup.
 
 ## Extensions
 ### To Implement Your Own Model
-- Add your model to ./models and load the model in train.py.
+- Add your model to "./models" and load the model in train.py.
 
 ### To Implement Other Datasets
 - Create the PLL version of the datasets and add to "./data".
