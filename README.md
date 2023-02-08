@@ -265,6 +265,15 @@ Note: `--mixup` means to use Mixup.
 
 <!-- Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner.  -->
 
+## Extensions
+### To Implement Your Own Model
+- Add your model to ./models and load the model in train.py.
+
+### To Implement Other Datasets
+- Create the PLL version of the datasets and add to ./data.
+- Implement the dataset (e.g., ./utils/cifar10.py).
+- Load your data in train.py.
+
 ## Acknowledgements
 
 We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), [PRODEN](https://github.com/Lvcrezia77/PRODEN), [SADE](https://github.com/Vanint/SADE-AgnosticLT), and [SoLar](https://github.com/hbzju/SoLar).
