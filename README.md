@@ -88,25 +88,156 @@ Note: `--mixup` means to use Mixup.
 ### Results
 #### CIFAR-10-LT
 
-| Imbalance ratio $\rho$ |  50   |  50   |  50   |  100  |  100  |  100  |
+<!-- | Imbalance ratio $\rho$ |  50   |  50   |  50   |  100  |  100  |  100  |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | ambiguity $q$          |  0.3  |  0.5  |  0.7  |  0.3  |  0.5  |  0.7  |
 | CORR                   | 76.12 | 56.45 | 41.56 | 66.38 | 50.09 | 38.11 |
 | CORR + Oracle-LA[[2]](#LA)            | 36.27 | 17.61 | 12.77 | 29.97 | 15.80 | 11.75 |
 | CORR + RECORDS              | 82.57 | <u>80.28</u> | <u>67.24</u> | <u>77.66</u> | <u>72.90</u> | <u>57.46</u> |
 | SoLar (w/ Mixup)                   | <u>83.88</u>    | 76.55         | 54.61          | 75.38    | 70.63    | 53.15          |
-| CORR + RECORDS (w/ Mixup)             |__84.25__ |__82.5__ |__71.24__|__79.79__|__74.07__|__62.25__|
+| CORR + RECORDS (w/ Mixup)             |<b>84.25<b> |<b>82.5<b> |<b>71.24<b>|<b>79.79<b>|<b>74.07<b>|<b>62.25<b>| -->
+
+<table>
+    <tr>
+        <td>Imbalance ratio $\rho$</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>ambiguity $q$</td>
+        <td>0.3</td>
+        <td>0.5</td>
+        <td>0.7</td>
+        <td>0.3</td>
+        <td>0.5</td>
+        <td>0.7</td>
+    </tr>
+    <tr>
+        <td>CORR</td>
+        <td>76.12</td>
+        <td>56.45</td>
+        <td>41.56</td>
+        <td>66.38</td>
+        <td>50.09</td>
+        <td>38.11</td>
+    </tr>
+    <tr>
+        <td>CORR + Oracle-LA<a href="#LA">[2]</a></td>
+        <td>36.27</td>
+        <td>17.61</td>
+        <td>12.77</td>
+        <td>29.97</td>
+        <td>15.80</td>
+        <td>11.75</td>
+    </tr>
+    <tr>
+        <td>CORR + RECORDS</td>
+        <td>82.57</td>
+        <td><u>80.28</u></td>
+        <td><u>67.24</u></td>
+        <td><u>77.66</u></td>
+        <td><u>72.90</u></td>
+        <td><u>57.46</u></td>
+    </tr>
+    <tr>
+        <td>SoLar (w/ Mixup)</td>
+        <td><u>83.88</u></td>
+        <td>76.55</td>
+        <td>54.61</td>
+        <td>75.38</td>
+        <td>70.63</td>
+        <td>53.15</td>
+    </tr>
+    <tr>
+        <td>CORR + RECORDS (w/ Mixup)</td>
+        <td><b>84.25<b></td>
+        <td><b>82.5<b></td>
+        <td><b>71.24<b></td>
+        <td><b>79.79<b></td>
+        <td><b>74.07<b></td>
+        <td><b>62.25<b></td>
+    </tr>
+</table>
 
 #### CIFAR-100-LT
 
-| Imbalance ratio $\rho$ |     50     |     50     |     50     |     100    |     100    |     100    |
+<!-- | Imbalance ratio $\rho$ |     50     |     50     |     50     |     100    |     100    |     100    |
 |:-----:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
 | ambiguity $q$          | 0.03       | 0.05       | 0.07       | 0.03       | 0.05       | 0.07       |
 | CORR                   | 42.29      | 38.03      | 36.59      | 38.39      | 34.09      | 31.05      |
 | CORR + Oracle-LA            | 22.56      | 5.59       | 3.12       | 11.37      | 3.32       | 1.98       |
 | CORR + RECORDS|<u>48.06</u>|45.56|42.51|42.25|40.59|38.65|
 | SoLar (w/ Mixup) |47.93   |<u>46.85</u>    |<u>45.1</u>|<u>42.51</u>       |<u>41.71</u>|<u>39.15</u>      |
-| CORR + RECORDS (w/ Mixup)|__52.08__|__50.58__|__47.91__|__46.57__|__45.22__|__44.73__|
+| CORR + RECORDS (w/ Mixup)|<b>52.08<b>|<b>50.58<b>|<b>47.91<b>|<b>46.57<b>|<b>45.22<b>|<b>44.73<b>| -->
+<table>
+    <tr>
+        <td>Imbalance ratio $\rho$</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>ambiguity $q$</td>
+        <td>0.03</td>
+        <td>0.05</td>
+        <td>0.07</td>
+        <td>0.03</td>
+        <td>0.05</td>
+        <td>0.07</td>
+    </tr>
+    <tr>
+        <td>CORR</td>
+        <td>42.29</td>
+        <td>38.03</td>
+        <td>36.59</td>
+        <td>38.39</td>
+        <td>34.09</td>
+        <td>31.05</td>
+    </tr>
+    <tr>
+        <td>CORR + Oracle-LA</td>
+        <td>22.56</td>
+        <td>5.59</td>
+        <td>3.12</td>
+        <td>11.37</td>
+        <td>3.32</td>
+        <td>1.98</td>
+    </tr>
+    <tr>
+        <td>CORR + RECORDS</td>
+        <td><u>48.06</u></td>
+        <td>45.56</td>
+        <td>42.51</td>
+        <td>42.25</td>
+        <td>40.59</td>
+        <td>38.65</td>
+    </tr>
+    <tr>
+        <td>SoLar (w/ Mixup)</td>
+        <td>47.93</td>
+        <td><u>46.85</u></td>
+        <td><u>45.1</u></td>
+        <td><u>42.51</u></td>
+        <td><u>41.71</u></td>
+        <td><u>39.15</u></td>
+    </tr>
+    <tr>
+        <td>CORR + RECORDS (w/ Mixup)</td>
+        <td><b>52.08</b></td>
+        <td><b>50.58</b></td>
+        <td><b>47.91</b></td>
+        <td><b>46.57</b></td>
+        <td><b>45.22</b></td>
+        <td><b>44.73</b></td>
+    </tr>
+</table>
 
 Note: SoLar[[3]](#SoLar) is a concurrent LT-PLL work published in NeuIPS 2022. It improves the label disambiguation process in LT-PLL through the optimal transport technique. Different from SoLar, RECORDS tries to solve the LT-PLL problem from the perspective of rebalancing in a lightweight and effective manner. 
 
