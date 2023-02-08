@@ -1,6 +1,6 @@
 # Long-Tailed Partial Label Learning via Dynamic Rebalancing
 
-by [Feng Hong](https://github.com/Feng-Hong/), [Jiangchao Yao](https://sunarker.github.io), [Zhihan Zhou](https://github.com/Zhihan-Zhou), [Yanfeng Wang](https://cmic.sjtu.edu.cn/wangyanfeng/), and [Ya Zhang](https://mediabrain.sjtu.edu.cn/yazhang/) at SJTU and Shanghai AI Lab.
+by [Feng Hong](https://github.com/Feng-Hong/), [Jiangchao Yao](https://sunarker.github.io), [Zhihan Zhou](https://github.com/Zhihan-Zhou), [Ya Zhang](https://mediabrain.sjtu.edu.cn/yazhang/), and [Yanfeng Wang](https://cmic.sjtu.edu.cn/wangyanfeng/) at SJTU and Shanghai AI Lab.
 
 <em>International Conference on Learning Representations (ICLR), 2023.</em>
 
