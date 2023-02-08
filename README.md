@@ -270,7 +270,7 @@ Note: `--mixup` means to use Mixup.
 - Add your model to ./models and load the model in train.py.
 
 ### To Implement Other Datasets
-- Create the PLL version of the datasets and add to ./data.
+- Create the PLL version of the datasets and add to "./data".
 - Implement the dataset (e.g., ./utils/cifar10.py).
 - Load your data in train.py.
 
