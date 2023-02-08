@@ -62,24 +62,24 @@ After the preparation work, the whole project should have the following structur
 
 #### Run CORR[[1]](#CORR) on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
 ```shell
-CUDA_VISIBLE_DEVICES=0 python -u train.py --exp-dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist-url 'tcp://localhost:10000' --multiprocessing-distributed --world-size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print-freq 100 --partial_rate 0.3 --imb_factor 0.01
+CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist_url 'tcp://localhost:10000' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.3 --imb_factor 0.01
 ```
 
 #### Run CORR + RECORDS on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
 ```shell
-CUDA_VISIBLE_DEVICES=0 python -u train.py --exp-dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print-freq 100 --partial_rate 0.3 --imb_factor 0.01 --records
+CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist_url 'tcp://localhost:10001' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.3 --imb_factor 0.01 --records
 ```
 Note: `--records` means to apply RECORDS on the PLL baseline.
 
 #### Run CORR + RECORDS on CIFAR-100-LT-NU with $q=0.03$ and Imbalance ratio $\rho = 0.01$
 ```shell
-CUDA_VISIBLE_DEVICES=0 python -u train.py --exp-dir experiment/CORR-CIFAR-100 --dataset cifar100_im --num_class 100 --dist-url 'tcp://localhost:10002' --multiprocessing-distributed --world-size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print-freq 100 --partial_rate 0.03 --imb_factor 0.01 --records --hierarchical
+CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-100 --dataset cifar100_im --num_class 100 --dist_url 'tcp://localhost:10002' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.03 --imb_factor 0.01 --records --hierarchical
 ```
 Note: `--hierarchical` means using the non-uniform version of the dataset, i.e., CIFAR-100-LT-NU.
 
 #### Run CORR + RECORDS with Mixup on CIFAR-10-LT with $q=0.3$ and Imbalance ratio $\rho = 0.01$
 ```shell
-CUDA_VISIBLE_DEVICES=0 python -u train.py --exp-dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist-url 'tcp://localhost:10003' --multiprocessing-distributed --world-size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print-freq 100 --partial_rate 0.3 --imb_factor 0.01 --records --mixup
+CUDA_VISIBLE_DEVICES=0 python -u train.py --exp_dir experiment/CORR-CIFAR-10 --dataset cifar10_im --num_class 10 --dist_url 'tcp://localhost:10003' --multiprocessing_distributed --world_size 1 --rank 0 --seed 123 --arch resnet18 --upd_start 1 --lr 0.01 --wd 1e-3 --cosine --epochs 800 --print_freq 100 --partial_rate 0.3 --imb_factor 0.01 --records --mixup
 ```
 Note: `--mixup` means to use Mixup.
 

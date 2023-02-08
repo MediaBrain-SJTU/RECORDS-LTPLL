@@ -30,7 +30,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('--dataset', default='cifar10', type=str,
                     choices=['cifar10_im','cifar100_im'],
                     help='dataset name')
-parser.add_argument('--exp-dir', default='experiment/CORR', type=str,
+parser.add_argument('--exp_dir', default='experiment/CORR', type=str,
                     help='experiment directory for saving checkpoints and logs')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='resnet18', choices=['resnet18'],
                     help='network architecture')
@@ -38,11 +38,11 @@ parser.add_argument('-j', '--workers', default=32, type=int,
                     help='number of data loading workers (default: 32)')
 parser.add_argument('--epochs', default=800, type=int,
                     help='number of total epochs to run')
-parser.add_argument('--start-epoch', default=0, type=int,
+parser.add_argument('--start_epoch', default=0, type=int,
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('-b', '--batch-size', default=256, type=int,
+parser.add_argument('-b', '--batch_size', default=256, type=int,
                     help='mini-batch size')
-parser.add_argument('--lr', '--learning-rate', default=0.02, type=float,
+parser.add_argument('--lr', '--learning_rate', default=0.02, type=float,
                     metavar='LR', help='initial learning rate', dest='lr')
 parser.add_argument('-lr_decay_epochs', type=str, default='700,800,900',
                     help='where to decay lr, can be a list')
@@ -52,26 +52,26 @@ parser.add_argument('--cosine', action='store_true', default=False,
                     help='use cosine lr schedule')
 parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
                     help='momentum of SGD solver')
-parser.add_argument('--wd', '--weight-decay', default=1e-5, type=float,
+parser.add_argument('--wd', '--weight_decay', default=1e-5, type=float,
                     metavar='W', help='weight decay (default: 1e-5)',
                     dest='weight_decay')
-parser.add_argument('-p', '--print-freq', default=100, type=int,
+parser.add_argument('-p', '--print_freq', default=100, type=int,
                     help='print frequency (default: 100)')
 parser.add_argument('--resume', default='', type=str,
                     help='path to latest checkpoint (default: none)')
-parser.add_argument('--world-size', default=-1, type=int,
+parser.add_argument('--world_size', default=-1, type=int,
                     help='number of nodes for distributed training')
 parser.add_argument('--rank', default=-1, type=int,
                     help='node rank for distributed training')
-parser.add_argument('--dist-url', default='tcp://localhost:10002', type=str,
+parser.add_argument('--dist_url', default='tcp://localhost:10002', type=str,
                     help='url used to set up distributed training')
-parser.add_argument('--dist-backend', default='nccl', type=str,
+parser.add_argument('--dist_backend', default='nccl', type=str,
                     help='distributed backend')
 parser.add_argument('--seed', default=None, type=int,
                     help='seed for initializing training. ')
 parser.add_argument('--gpu', default=None, type=int,
                     help='GPU id to use.')
-parser.add_argument('--multiprocessing-distributed', action='store_true',
+parser.add_argument('--multiprocessing_distributed', action='store_true',
                     help='Use multi-processing distributed training to launch '
                          'N processes per node, which has N GPUs. This is the '
                          'fastest way to use PyTorch for either single node or '
