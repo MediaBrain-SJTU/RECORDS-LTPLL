@@ -4,7 +4,7 @@ by [Feng Hong](https://github.com/Feng-Hong/), [Jiangchao Yao](https://sunarker.
 
 <em>International Conference on Learning Representations (ICLR), 2023.</em>
 
-[[OpenReview]](https://openreview.net/forum?id=sXfWoK4KvSW)
+[[OpenReview]](https://openreview.net/forum?id=sXfWoK4KvSW), [[arXiv]](https://arxiv.org/abs/2302.05080)
 
 <img src="./assets/RECORDS.png" width="93%" />
 
@@ -312,4 +312,5 @@ We borrow some codes from [PiCO](https://github.com/hbzju/PiCO), [LDAM-DRW](http
 
 <span id="LA">[3]</span> AK Menon, S Jayasumana, AS Rawat, et al. Long-tail learning via logit adjustment. ICLR. 2021.
 
-
+## Contact
+If you have any problem with this code, please feel free to contact **feng.hong@sjtu.edu.cn**.
