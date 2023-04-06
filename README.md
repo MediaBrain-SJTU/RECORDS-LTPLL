@@ -1,4 +1,5 @@
-# Long-Tailed Partial Label Learning via Dynamic Rebalancing
+<!-- # Long-Tailed Partial Label Learning via Dynamic Rebalancing -->
+<h1 align="center">Long-Tailed Partial Label Learning<br>via Dynamic Rebalancing</h1>
 
 <p align="center">
     <a href="https://arxiv.org/abs/2302.05080"><img src="https://img.shields.io/badge/arXiv-2302.05080-b31b1b.svg" alt="Paper"></a>
