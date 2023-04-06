@@ -1,10 +1,24 @@
 # Long-Tailed Partial Label Learning via Dynamic Rebalancing
 
+<p align="center">
+    <a href="https://arxiv.org/abs/2302.05080"><img src="https://img.shields.io/badge/arXiv-2302.05080-b31b1b.svg" alt="Paper"></a>
+    <a href="https://openreview.net/forum?id=sXfWoK4KvSW"><img src="https://img.shields.io/badge/OpenReview-ICLR'23-blue" alt="Paper"></a>
+    <a href="https://github.com/MediaBrain-SJTU/RECORDS-LTPLL"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
+    <!-- <a href="https://colab.research.google.com/drive/1t0_4BxEJ0XncyYvn_VyEQhxwNMvtSUNx?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a> -->
+    <!-- <a href="https://openreview.net/forum?id=eKllxpLOOm"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=ICLR%2723&color=red"> </a> -->
+    <!-- <a href="https://github.com/ZFancy/SFAT/blob/main/license"> <img alt="License" src="https://img.shields.io/github/license/ZFancy/SFAT?color=blue"> </a> -->
+    <!-- <a href="https://neurips.cc/virtual/2022/poster/54643"> <img src="https://img.shields.io/badge/Video-grey?logo=Kuaishou&logoColor=white" alt="Video"></a> -->
+    <!-- <a href="https://iclr.cc/media/iclr-2023/Slides/11305.pdf"> <img src="https://img.shields.io/badge/Slides-grey?&logo=MicrosoftPowerPoint&logoColor=white" alt="Slides"></a>
+    <a href="https://iclr.cc/media/PosterPDFs/ICLR%202023/11305.png?t=1680238646.843235"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a> -->
+</p>
+
 by [Feng Hong](https://github.com/Feng-Hong/), [Jiangchao Yao](https://sunarker.github.io), [Zhihan Zhou](https://github.com/Zhihan-Zhou), [Ya Zhang](https://mediabrain.sjtu.edu.cn/yazhang/), and [Yanfeng Wang](https://cmic.sjtu.edu.cn/wangyanfeng/) at SJTU and Shanghai AI Lab.
 
 <em>International Conference on Learning Representations (ICLR), 2023.</em>
 
-[[OpenReview]](https://openreview.net/forum?id=sXfWoK4KvSW), [[arXiv]](https://arxiv.org/abs/2302.05080)
+<!-- [[OpenReview]](https://openreview.net/forum?id=sXfWoK4KvSW), [[arXiv]](https://arxiv.org/abs/2302.05080) -->
+
+
 
 <img src="./assets/RECORDS.png" width="93%" />
 
