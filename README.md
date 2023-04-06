@@ -4,7 +4,7 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2302.05080"><img src="https://img.shields.io/badge/arXiv-2302.05080-b31b1b.svg" alt="Paper"></a>
     <a href="https://openreview.net/forum?id=sXfWoK4KvSW"><img src="https://img.shields.io/badge/OpenReview-ICLR'23-blue" alt="Paper"></a>
-    <a href="https://github.com/MediaBrain-SJTU/RECORDS-LTPLL"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
+    <a href="https://github.com/MediaBrain-SJTU/RECORDS-LTPLL"><img src="https://img.shields.io/badge/Github-RECORDS-brightgreen?logo=github" alt="Github"></a>
     <!-- <a href="https://colab.research.google.com/drive/1t0_4BxEJ0XncyYvn_VyEQhxwNMvtSUNx?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a> -->
     <!-- <a href="https://openreview.net/forum?id=eKllxpLOOm"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=ICLR%2723&color=red"> </a> -->
     <!-- <a href="https://github.com/ZFancy/SFAT/blob/main/license"> <img alt="License" src="https://img.shields.io/github/license/ZFancy/SFAT?color=blue"> </a> -->
